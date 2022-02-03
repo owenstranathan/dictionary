@@ -1,0 +1,1 @@
+beautifulsoup4==4.10.0 # not strictly required to use the script, only needed to build the dictionary which you shouldn't need to do often
