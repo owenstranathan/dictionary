@@ -1,4 +1,3 @@
-
 @echo off
 
 set dirname=%~dp0

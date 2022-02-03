@@ -53,7 +53,7 @@ def lookup(word, fuzzy=False):
     cur = conn.cursor()
     cur.execute(f"SELECT * FROM words WHERE word{'=' if not fuzzy else ' LIKE '}:word;", {"word":word})
     results = [Entry(*e) for e in cur.fetchall()]
-    print(f"Found {len(results)} result{'s' if len(results)!=1 else ''}.")
+    print(f"Found {len(results)} definition{'s' if len(results)!=1 else ''}.")
     for result in results:
         print(f"{result.word} ({result.pos}) - {result.definition}")
     conn.close()
